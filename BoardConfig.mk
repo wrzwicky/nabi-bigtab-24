@@ -1,0 +1,29 @@
+
+# config file for TARGET_DEVICE bigtab
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := cortex-a15
+TARGET_CPU_SMP := true
+
+# Platform
+TARGET_BOARD_PLATFORM := tegra
+
+TARGET_USERIMAGES_USE_EXT4 := true
+# optional for the actual make_ext4fs, but required for some calculation that is done after
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Exact numbers from partition analysis.
+#BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608 # 8M
+#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216 # 16M
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648 # 2G
+#ADDON 1610612736 # 1.6G
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 9934259355648 # 9G
+#BOARD_CACHEIMAGE_PARTITION_SIZE := 2147483648 # 2G
+
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
+
